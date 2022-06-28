@@ -1,0 +1,28 @@
+.card {
+  border-radius: 50px;
+}
+
+.card-container {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.circle-primary {
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.circle-second {
+  padding: 85px;
+  background-color: #E7EFF5;
+  border-radius: 50%;
+}
+
+.container-image-upload {
+  border: 1px dashed #9BB8D3;
+  border-radius: 10px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}

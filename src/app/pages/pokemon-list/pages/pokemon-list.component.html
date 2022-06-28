@@ -1,0 +1,13 @@
+<div class="row justify-content-center">
+  <div class="col">
+    <div class="d-flex justify-content-between mb-3">
+      <h3 class="text-primary">Mis Pokémon</h3>
+      <app-button [text]="'Editar'"></app-button>
+    </div>
+    <div class="scroll-list">
+      <ng-container *ngFor="let pokemon of pokemonList">
+        <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+      </ng-container>
+    </div>
+  </div>
+</div>

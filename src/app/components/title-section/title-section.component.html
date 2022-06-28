@@ -1,0 +1,12 @@
+<ng-container *ngIf="isTrainer else noTrainer">
+  <div class="d-flex align-items-center py-5">
+    <h2 class="text-primary mr-3">{{ title }}</h2>
+    <app-button [text]="'Editar perfil'"></app-button>
+  </div>
+</ng-container>
+<ng-template #noTrainer>
+  <div class="py-5">
+    <h2 class="text-primary">{{ title }}</h2>
+    <p>{{ description }}</p>
+  </div>
+</ng-template>

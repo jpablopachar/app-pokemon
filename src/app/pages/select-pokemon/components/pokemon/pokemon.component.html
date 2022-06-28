@@ -1,0 +1,7 @@
+<div class="card-pokemon mb-3" [ngClass]="pokemonSelected.status ? 'bg-warning' : 'bg-light'" (click)="setPokemonSelected()">
+  <img [src]="pokemonSelected.image" width="100">
+  <div class="bg-primary name-pokemon">
+    <span class="mr-2"># {{ pokemonSelected.id }}</span>
+    <span>{{ pokemonSelected.name }}</span>
+  </div>
+</div>

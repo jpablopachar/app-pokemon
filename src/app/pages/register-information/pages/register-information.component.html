@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+  <div class="col-auto">
+    <div>
+      <h3 class="text-primary">Tu información</h3>
+      <p>Completa la siguiente información para completar tu perfil</p>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label>Pasatiempo favorito</label>
+        <select class="form-control" formControlName="hobby">
+          <option *ngFor="let hobby of hobbiesList" [value]="hobby.id">{{ hobby.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Cumpleaños</label>
+        <input type="date" class="form-control" formControlName="birthday">
+      </div>
+      <div class="form-group">
+        <label>{{ isAdult ? 'Documento' : 'Carnet de minoridad' }}</label>
+        <input type="text" class="form-control" formControlName="document">
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary mx-auto" [disabled]="!isPhotoSelected || form.invalid">Continuar</button>
+      </div>
+    </form>
+  </div>
+</div>
